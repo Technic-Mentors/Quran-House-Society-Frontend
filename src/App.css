@@ -1,0 +1,642 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* general css start */
+:root {
+  --primary-color: green;
+  --primary-low: rgb(61, 129, 61);
+  --secondary-color: rgb(37, 37, 136);
+  --whitish: white;
+  --blackish: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+i {
+  color: var(--primary-color);
+}
+
+p {
+  margin: 0;
+}
+
+.py-6 {
+  padding: 190px 0;
+}
+
+.allHeaderPadding {
+  padding: 120px 0;
+}
+
+.btn1 {
+  background-color: var(--primary-color);
+  padding: 10px;
+  color: white;
+  border: none;
+}
+
+.btn1:hover {
+  background-color: var(--primary-color);
+  padding: 10px;
+  color: white;
+  border: none;
+}
+
+/* General css end */
+
+/* header start */
+.homeHead1 {
+  background-image: url("./assets/homeHeader1st.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.homeHead2 {
+  background-image: url("./assets/homeHeader3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.homeHead-overlay {
+  background-color: rgba(26, 29, 26, 0.7);
+}
+
+.homeHead1,
+.homeHead2 {
+  text-align: center;
+  color: var(--whitish);
+}
+
+/* header end */
+
+/* about start */
+.aboutCall i {
+  font-size: 25px;
+  background-color: var(--primary-color);
+  color: var(--whitish);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* about end */
+/* quranic revival start */
+.QuranicRevivalbg {
+  background-image: url(./assets/QuranicRevivalBg.avif);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.QuranicRevival-overlay {
+  background-color: rgba(236, 240, 255, 0.2);
+}
+
+.quranicRevival i {
+  margin-bottom: 15px;
+}
+
+.quranicRevival h5 {
+  margin-bottom: 0;
+}
+
+.quranicRevival .card {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.quranicRevival .card:hover {
+  border: 1px solid var(--primary-color);
+}
+
+.quranicRevival i {
+  font-size: 30px;
+}
+
+.quranicRevivalMiddle {
+  margin-top: 10px;
+  color: var(--whitish);
+}
+
+.para,
+.para,
+.para {
+  background-color: var(--primary-color);
+  display: none;
+  height: 150px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 140px;
+}
+
+.para1,
+.para2,
+.para3,
+.para4,
+.para5,
+.para6,
+.para7,
+.para8 {
+  display: flex;
+  align-items: center;
+}
+
+/* quranic revival end */
+
+/* learning facilities start*/
+.learningFacilities .card {
+  -webkit-border-radius: 0px;
+  border: none;
+  border-radius: 7px;
+  background: #f9f9fc;
+  box-shadow: inset 7px 7px 5px #b8b8ba,
+    inset -7px -7px 5px #eeeded;
+  transform: translateY(0);
+  transition: transform 0.6s ease;
+}
+
+.learningFacilities .card:hover {
+  background-color: var(--primary-low);
+  transform: translateY(-10px);
+  color: white;
+  box-shadow: none;
+  transition: transform 0.6s ease;
+}
+
+.learningCol1 {
+  position: relative;
+}
+
+.learningCol1::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  background-color: var(--primary-color);
+  top: 0;
+  right: -20%;
+}
+
+/* learning facilities end*/
+/* Video & Audio start*/
+
+@media (min-width:1200px) {
+
+  .videoAudio {
+    position: relative;
+  }
+
+  .videoAudioShape {
+    content: "";
+    position: absolute;
+    top: 38%;
+    left: 0;
+  }
+
+  .videoAudioShapeCircle {
+    content: "";
+    position: absolute;
+    top: 38%;
+    background-color: red;
+    right: 23%;
+  }
+
+  @keyframes AudioVideoShapeAnimation {
+    0% {
+      transform: scale(0.1);
+      background-color: rgba(149, 177, 190, 0.1)
+    }
+
+    100% {
+      transform: scale(0.7);
+      background-color: rgba(121, 166, 187, 0.1)
+    }
+  }
+
+  .shape1,
+  .shape2,
+  .shape3,
+  .shape4,
+  .shape5,
+  .shape6,
+  .shape7,
+  .shape8,
+  .shape9,
+  .shape10 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    animation: AudioVideoShapeAnimation 7s ease infinite;
+  }
+
+  .shape2 {
+    animation-delay: 1s;
+  }
+
+  .shape3 {
+    animation-delay: 2s;
+  }
+
+  .shape4 {
+    animation-delay: 3s;
+  }
+
+  .shape5 {
+    animation-delay: 4s;
+  }
+
+  .shape7 {
+    animation-delay: 1s;
+  }
+
+  .shape8 {
+    animation-delay: 2s;
+  }
+
+  .shape9 {
+    animation-delay: 3s;
+  }
+
+  .shape10 {
+    animation-delay: 4s;
+  }
+}
+
+.vidoAudioBg {
+  background-image: url("./assets/homeHeader1.jpg");
+  color: white;
+}
+
+.vidoAudio-overlay {
+  background-color: rgba(1, 1, 19, 0.7);
+}
+
+/* Video & Audio end*/
+
+/* testimonial start */
+.sliderContent {
+  background-color: rgb(213, 245, 213);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+@media (min-width:700px) {
+  .sliderContent {
+    width: 95% !important;
+  }
+}
+
+.sliderContent i {
+  background-color: var(--primary-color);
+  padding: 15px;
+  color: var(--whitish);
+  border-radius: 50%;
+}
+
+.sliderContent p {
+  margin-top: 15px;
+}
+
+/* testimonial end */
+
+/* all page headers start */
+.allPageHeaderBg {
+  background-image: url("./assets/homeHeader1.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: var(--whitish);
+}
+
+.allPageHeaderOverlay {
+  background-color: rgba(19, 19, 34, .8);
+}
+
+/* all page headers end */
+
+/* about page start */
+.aboutPageSection li {
+  line-height: 2.5rem;
+}
+
+.missionVision .card {
+  height: 100%;
+  border: 1px dashed var(--primary-color);
+  position: relative;
+}
+
+.missionVision .card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transition: 0.7s ease;
+}
+
+.missionVision .card:hover:after {
+  transform: scaleX(1);
+}
+
+.missionVision .card:hover .card-body {
+  z-index: 1;
+  color: white;
+}
+
+.valuesGoals {
+  background-image: url(./assets/valuesGoals-bg.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: rgb(245, 245, 245);
+}
+
+.valuesGoals .card {
+  margin-bottom: 10px;
+  border: none;
+  box-shadow: 0px 2px 15px rgba(88, 89, 90, 0.35);
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+  position: relative;
+}
+
+.valuesGoals .card::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 0;
+  background-color: var(--primary-color);
+  transition: height 0.5s ease;
+}
+
+.valuesGoals .card:hover::before {
+  height: 100%;
+}
+
+.valuesGoals .card:hover {
+  transform: translateX(10px);
+  transition: transform 0.5s ease;
+}
+
+/* about page end */
+
+/* video lecture page start */
+.allVideoLectures .card {
+  border-radius: 10%;
+  position: relative;
+}
+
+.allVideoLectures .card:hover .card-body,
+.allVideoLectures .card:hover .card-body i {
+  z-index: 2;
+  color: white;
+}
+
+.allVideoLectures p {
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+.allVideoLectures p i {
+  font-size: 15px;
+}
+
+.allVideoLectures .card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 10%;
+  transform: scaleX(0);
+  transition: 0.7s ease;
+}
+
+.allVideoLectures .card:hover::after {
+  transform: scaleX(1);
+}
+
+/* video lecture page end */
+/* course page start */
+.courseCard {
+  border: 1px dashed var(--primary-color);
+  position: relative;
+}
+
+.courseCard::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transition: 1s ease;
+}
+
+.courseCard:hover:after {
+  transform: scaleX(1);
+}
+
+.courseCard:hover .card-body {
+  color: white;
+  z-index: 1;
+}
+
+/* course page end */
+/* contact page start */
+.contactInfo .card {
+  height: 100%;
+  border: 1px dashed var(--primary-color);
+  position: relative;
+}
+
+.contactInfo .card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transition: 1s ease;
+}
+
+.contactInfo .card:hover:after {
+  transform: scaleX(1);
+}
+
+.contactInfo .card:hover .card-body {
+  z-index: 1;
+  color: white;
+}
+
+.contactForm input,
+.contactForm textarea {
+  border: 1px solid var(--primary-color);
+}
+
+.contactInfo .card h1 {
+  margin-top: 13px;
+}
+
+.contactInfo i {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* contact page end */
+/* donate page start */
+.donatePage li {
+  line-height: 2.5rem;
+}
+
+/* donate page end */
+/* footer start */
+.footerBg {
+  background-image: url("./assets/homeHeader1.jpg");
+  color: white;
+
+}
+
+.footerOverlay {
+  background-color: rgba(1, 1, 19, 0.8);
+}
+
+.siteLinks {
+  line-height: 3rem;
+}
+
+.siteLinks li {
+  list-style: none;
+}
+
+.social-links i {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.siteLinks a {
+  color: white;
+}
+
+.footerBottom {
+  background-color: white;
+  color: initial;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* footer end */
+/* admin panel css start */
+.lectureForm input,
+.lectureForm select {
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid rgb(201, 201, 201);
+}
+
+.lectureForm button {
+  margin-top: 15px;
+}
+
+.lecturesTable th {
+  color: var(--primary-color);
+}
+
+.adminLink {
+  position: relative;
+}
+
+.adminLink::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  top: 0;
+  right: -6%;
+  background-color: var(--primary-color);
+}
+
+.adminLink button {
+  width: 210px;
+}
+
+/* admin panel css end */
+/* user profile css start */
+.profile-set {
+  position: absolute;
+  top: 65%;
+}
+
+.profile-set h3 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  color: white;
+}
+
+/* styles.css */
+@font-face {
+  font-family: 'Jameel Noori Nastaleeq Kasheeda';
+  src: url("./fonts/Jameel Noori Nastaleeq Kasheeda.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+.urdu-font {
+  font-family: 'Jameel Noori Nastaleeq Kasheeda', sans-serif;
+}
+
+.rtl {
+  direction: rtl;
+  text-align: right;
+  list-style: none;
+  font-family: 'Jameel Noori Nastaleeq Kasheeda', sans-serif;
+}
+
+.rtl li {
+  font-size: 21px;
+}
+
+.urdu-font p {
+  font-size: 21px;
+}
+
+.urdu-font .nav-item {
+  font-size: 21px;
+}
