@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import quranHouseLogo from "../assets/quranHouseLogo.png"
+import quranHouseLogo from "../assets/quranHouseLogo.avif"
 import userImg from "../assets/user-img.png"
 function UserBar() {
     const User = JSON.parse(sessionStorage.getItem("User"))

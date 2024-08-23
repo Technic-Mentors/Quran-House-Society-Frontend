@@ -19,6 +19,10 @@ h6 {
   font-family: "Josefin Sans", sans-serif;
 }
 
+li {
+  line-height: 3rem !important;
+}
+
 a {
   text-decoration: none !important;
 }
@@ -64,16 +68,58 @@ p {
 
 /* General css end */
 
+/* navbar */
+.nav-link {
+  color: black !important;
+  font-size: 17px;
+}
+
+.nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+.dropdown-item.active {
+  background-color: transparent;
+  color: var(--primary-color) !important;
+}
+
+@media (min-width:1000px) {
+  .navBar-item {
+    position: relative;
+  }
+
+  .navBar-item::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 60%;
+    top: 20%;
+    right: 0;
+    background-color: var(--primary-color);
+    opacity: 0.2;
+  }
+
+  .urdu-font .navBar-item::after {
+    left: 0;
+  }
+}
+
 /* header start */
 .homeHead1 {
-  background-image: url("./assets/homeHeader1st.jpeg");
+  background-image: url("./assets/header1.avif");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 
 .homeHead2 {
-  background-image: url("./assets/homeHeader3.jpg");
+  background-image: url("./assets/header2.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.homeHead3 {
+  background-image: url("./assets/header1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -121,12 +167,23 @@ p {
 }
 
 .quranicRevival .card {
-  margin-top: 20px;
+  height: 100%;
   text-align: center;
+  border: 1px solid var(--primary-color);
+  transform: translateY(0);
+  transition: transform 0.6s ease;
 }
 
 .quranicRevival .card:hover {
-  border: 1px solid var(--primary-color);
+  background-color: var(--primary-low);
+  transform: translateY(-10px);
+  color: white;
+  box-shadow: none;
+  transition: transform 0.6s ease;
+}
+
+.quranicRevival .card:hover i {
+  color: white;
 }
 
 .quranicRevival i {
@@ -136,29 +193,6 @@ p {
 .quranicRevivalMiddle {
   margin-top: 10px;
   color: var(--whitish);
-}
-
-.para,
-.para,
-.para {
-  background-color: var(--primary-color);
-  display: none;
-  height: 150px;
-  width: 100%;
-  padding: 40px;
-  border-radius: 140px;
-}
-
-.para1,
-.para2,
-.para3,
-.para4,
-.para5,
-.para6,
-.para7,
-.para8 {
-  display: flex;
-  align-items: center;
 }
 
 /* quranic revival end */
@@ -181,20 +215,6 @@ p {
   color: white;
   box-shadow: none;
   transition: transform 0.6s ease;
-}
-
-.learningCol1 {
-  position: relative;
-}
-
-.learningCol1::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 3px;
-  background-color: var(--primary-color);
-  top: 0;
-  right: -20%;
 }
 
 /* learning facilities end*/
@@ -283,12 +303,15 @@ p {
 }
 
 .vidoAudioBg {
-  background-image: url("./assets/homeHeader1.jpg");
+  background-image: url("./assets/lecturesBg.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: white;
 }
 
 .vidoAudio-overlay {
-  background-color: rgba(1, 1, 19, 0.7);
+  background-color: rgba(1, 1, 19, 0.6);
 }
 
 /* Video & Audio end*/
@@ -321,7 +344,7 @@ p {
 
 /* all page headers start */
 .allPageHeaderBg {
-  background-image: url("./assets/homeHeader1.avif");
+  background-image: url("./assets/allPageHeader.avif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -329,15 +352,12 @@ p {
 }
 
 .allPageHeaderOverlay {
-  background-color: rgba(19, 19, 34, .8);
+  background-color: rgba(19, 19, 34, .7);
 }
 
 /* all page headers end */
 
 /* about page start */
-.aboutPageSection li {
-  line-height: 2.5rem;
-}
 
 .missionVision .card {
   height: 100%;
@@ -365,7 +385,7 @@ p {
 }
 
 .valuesGoals {
-  background-image: url(./assets/valuesGoals-bg.png);
+  background-image: url(./assets/valuesGoals-bg.avif);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: auto;
@@ -403,7 +423,6 @@ p {
 
 /* video lecture page start */
 .allVideoLectures .card {
-  border-radius: 10%;
   position: relative;
 }
 
@@ -430,7 +449,6 @@ p {
   width: 100%;
   height: 100%;
   background-color: var(--primary-color);
-  border-radius: 10%;
   transform: scaleX(0);
   transition: 0.7s ease;
 }
@@ -510,20 +528,18 @@ p {
 
 /* contact page end */
 /* donate page start */
-.donatePage li {
-  line-height: 2.5rem;
-}
 
 /* donate page end */
 /* footer start */
 .footerBg {
-  background-image: url("./assets/homeHeader1.jpg");
+  background-image: url("./assets/footerBg.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
   color: white;
-
 }
 
 .footerOverlay {
-  background-color: rgba(1, 1, 19, 0.8);
+  background-color: rgba(1, 1, 19, 0.85);
 }
 
 .siteLinks {
@@ -546,10 +562,16 @@ p {
 }
 
 .footerBottom {
-  background-color: white;
-  color: initial;
+  background-color: var(--primary-color);
+  color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0 8px 0;
+}
+
+.footerBottom a {
+  color: initial;
+  text-decoration: underline !important;
+  font-weight: 600;
 }
 
 /* footer end */
@@ -608,7 +630,7 @@ p {
 /* styles.css */
 @font-face {
   font-family: 'Jameel Noori Nastaleeq Kasheeda';
-  src: url("./fonts/Jameel Noori Nastaleeq Kasheeda.ttf") format('truetype');
+  src: url("./assets/Jameel Noori Nastaleeq Kasheeda.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -637,6 +659,13 @@ p {
   font-size: 21px;
 }
 
-.urdu-font .nav-item {
-  font-size: 21px;
+.urdu-font .nav-link {
+  font-size: 21px !important;
+}
+
+/* profile set */
+.profileSet {
+  position: absolute;
+  top: 16%;
+  right: 1%;
 }

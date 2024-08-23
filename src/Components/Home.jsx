@@ -1,6 +1,6 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import HomeHeader from "./HomeHeader";
-import aboutImg from "../assets/about-img.png"
+import aboutImg from "../assets/about-img.avif"
 import MyContext from "../ContextApi/Mycontext";
 import Testimonial from "./Testimonial";
 import { Link } from "react-router-dom"
@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 export default function Home() {
     const { t, i18n } = useTranslation();
     const { Videolectures, Audiolectures } = useContext(MyContext)
-    const [display, setDisplay] = useState("")
+
     const getEmbeddableUrl = (url) => {
         const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
         const match = url.match(regExp);
@@ -22,8 +22,8 @@ export default function Home() {
             <HomeHeader />
             {/* about us section */}
             <div className="container pt-5">
-                <div className="row align-items-center">
-                    <div className="col-md-6">
+                <div className="row justify-content-between align-items-center">
+                    <div className="col-md-5">
                         <img src={aboutImg} className="img-fluid" alt="about section image" />
                     </div>
                     <div className="col-md-6">
@@ -34,87 +34,79 @@ export default function Home() {
                         <hr className="mt-4" />
                         <div className="row justify-content-between">
                             <div className="col-md-4 col-6">
-                                <Link to="/about"> <button className="btn btn1">{t("aboutBtn")}</button></Link>
+                                <Link to="/about"> <button className={`btn btn1 px-4 py-2 ${urduFont}`}>{t("aboutBtn")}</button></Link>
+                                
                             </div>
-                            <div className="col-md-4 col-6 d-flex align-items-center aboutCall">
+                            <div className="col-md-5 col-6 d-flex align-items-center aboutCall">
                                 <div >
                                     <i className="fas fa-phone me-2"></i>
                                 </div>
                                 <div>
                                     <h5 style={{ marginBottom: "0" }} className={urduFont}>{t("aboutCall")}</h5>
-                                    <p>00001111010</p>
+                                    <p>+ 92 300 8454065</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
             {/* Quranic revival */}
             <div className="QuranicRevivalbg mt-5">
                 <div className="QuranicRevival-overlay">
-                    <div className="container">
-                        <div className={`row py-5 align-items-center quranicRevival ${urduFont}`}>
+                    <div className="container quranicRevival">
+                        <div className="row py-5 g-4">
                             <h1 className={`text-center ${urduFont}`}>{t("quranicHead")}</h1>
                             <div className="col-md-4">
-                                <div className="card" onMouseOver={() => setDisplay("1")} onMouseDown={() => setDisplay("")}>
-                                    <div className="card-body">
+                                <div className="card">
+                                    <div className={`card-body ${urduFont}`}>
                                         <i className="fas fa-book"></i>
                                         <h3 className={urduFont}>{t("qura1st")}</h3>
+                                        <p>{t("qura1stDes")}</p>
                                     </div>
                                 </div>
-                                <div className="card " onMouseOver={() => setDisplay("2")} onMouseDown={() => setDisplay("")}>
-                                    <div className="card-body">
-                                        <i className="fas fa-chalkboard"></i>
-                                        <h3 className={urduFont}>{t("qura2nd")}</h3>
-                                    </div>
-                                </div>
-                                <div className="card " onMouseOver={() => setDisplay("3")} onMouseDown={() => setDisplay("")}>
-                                    <div className="card-body">
-                                        <i className="fas fa-users"></i>
-                                        <h3 className={urduFont}>{t("qura3rd")}</h3>
-                                    </div>
-                                </div>
-                                <div className="card " onMouseOver={() => setDisplay("7")} onMouseDown={() => setDisplay("")}>
-                                    <div className="card-body">
-                                        <i className="fas fa-lightbulb"></i>
-                                        <h3 className={urduFont}>{t("qura4th")}</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-4 d-flex align-items-center quranicRevivalMiddle p-4">
-                                <p className={`para ${display === "1" || display === "" ? "para1" : ""}`}>{t("qura1stDes")}</p>
-                                <p className={`para ${display === "2" ? "para2" : ""}`}>{t("qura2ndDes")}</p>
-                                <p className={`para ${display === "3" ? "para3" : ""}`}>{t("qura3rdDes")}</p>
-                                <p className={`para ${display === "4" ? "para4" : ""}`}>{t("qura4thDes")}</p>
-                                <p className={`para ${display === "5" ? "para5" : ""}`}>{t("qura5thDes")}</p>
-                                <p className={`para ${display === "6" ? "para6" : ""}`}>{t("qura6thDes")}</p>
-                                <p className={`para ${display === "7" ? "para7" : ""}`}>{t("qura7thDes")}</p>
-                                <p className={`para ${display === "8" ? "para8" : ""}`}>{t("qura8thDes")}</p>
                             </div>
                             <div className="col-md-4">
-                                <div className="card" onMouseOver={() => setDisplay("4")} onMouseDown={() => setDisplay("")}>
-                                    <div className="card-body">
+                                <div className="card">
+                                    <div className={`card-body ${urduFont}`}>
+                                        <i className="fas fa-chalkboard"></i>
+                                        <h3 className={urduFont}>{t("qura2nd")}</h3>
+                                        <p>{t("qura2ndDes")}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-4">
+                                <div className="card">
+                                    <div className={`card-body ${urduFont}`}>
+                                        <i className="fas fa-users"></i>
+                                        <h3 className={urduFont}>{t("qura3rd")}</h3>
+                                        <p>{t("qura3rdDes")}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-4">
+                                <div className="card">
+                                    <div className={`card-body ${urduFont}`}>
+                                        <i className="fas fa-lightbulb"></i>
+                                        <h3 className={urduFont}>{t("qura4th")}</h3>
+                                        <p>{t("qura4thDes")}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-4">
+                                <div className="card">
+                                    <div className={`card-body ${urduFont}`}>
                                         <i className="fas fa-user-tie"></i>
                                         <h3 className={urduFont}>{t("qura5th")}</h3>
+                                        <p>{t("qura5thDes")}</p>
                                     </div>
                                 </div>
-                                <div className="card" onMouseOver={() => setDisplay("5")} onMouseDown={() => setDisplay("")}>
-                                    <div className="card-body">
+                            </div>
+                            <div className="col-md-4">
+                                <div className="card">
+                                    <div className={`card-body ${urduFont}`}>
                                         <i className="fas fa-balance-scale"></i>
                                         <h3 className={urduFont}>{t("qura6th")}</h3>
-                                    </div>
-                                </div>
-                                <div className="card" onMouseOver={() => setDisplay("6")} onMouseDown={() => setDisplay("")}>
-                                    <div className="card-body">
-                                        <i className="fas fa-hands-helping"></i>
-                                        <h3 className={urduFont}>{t("qura7th")}</h3>
-                                    </div>
-                                </div>
-                                <div className="card" onMouseOver={() => setDisplay("8")} onMouseDown={() => setDisplay("")}>
-                                    <div className="card-body">
-                                        <i className="fas fa-globe"></i>
-                                        <h3 className={urduFont}>{t("qura8th")}</h3>
+                                        <p>{t("qura6thDes")}</p>
                                     </div>
                                 </div>
                             </div>
@@ -132,8 +124,8 @@ export default function Home() {
                             <p>{t("qurLeaFacDes")}</p>
                         </div>
                     </div>
-                    <div className="col-md-5 learningCol1">
-                        <div className="card">
+                    <div className="col-md-6">
+                        <div className="card p-3">
                             <div className="card-body">
                                 <h2 className={textDirection}>{t("qurLecFac1stHead")}</h2>
                                 <ul className={textDirection}>
@@ -142,7 +134,9 @@ export default function Home() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="card mt-4">
+                    </div>
+                    <div className="col-md-6">
+                        <div className="card p-3">
                             <div className="card-body">
                                 <h2 className={textDirection}>{t("qurLecFac2ndHead")}</h2>
                                 <ul className={textDirection}>
@@ -152,8 +146,8 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-5">
-                        <div className="card">
+                    <div className="col-md-6">
+                        <div className="card p-3">
                             <div className="card-body">
                                 <h2 className={textDirection}>{t("qurLecFac3rdHead")}</h2>
                                 <ul className={textDirection}>
@@ -162,7 +156,9 @@ export default function Home() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="card mt-4">
+                    </div>
+                    <div className="col-md-6">
+                        <div className="card p-3">
                             <div className="card-body">
                                 <h2 className={textDirection}>{t("qurLecFac4thHead")}</h2>
                                 <ul className={textDirection}>

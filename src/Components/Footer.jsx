@@ -36,9 +36,9 @@ export default function Footer() {
                         </div>
                         <div className="col-md-4 mt-3 contactInfo">
                             <h3>Contact Us</h3>
-                            <p><i className="fas fa-map me-2"></i> Gujranwala Pakistan</p>
-                            <p className="mt-3"><i className="fas fa-phone me-2"></i> 00001111010</p>
-                            <p className="mt-3"><i className="fas fa-envelope me-2"></i> quranhousesociety@gmail.com</p>
+                            <p><i className="fas fa-map me-2"></i> Wassalam 54 L,Valencia Town, Lahore</p>
+                            <p className="mt-3"><i className="fas fa-phone me-2"></i> +92 300 8454065</p>
+                            <p className="mt-3"><i className="fas fa-envelope me-2"></i>  usman@mk.com.pk</p>
                         </div>
                     </div>
                 </div>

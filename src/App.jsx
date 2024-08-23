@@ -40,6 +40,8 @@ import BookDetail from './Components/BookDetail';
 import BooksList from './AdminDashBoard/BooksList';
 import VideoLecturesCat from './Components/VideoLecturesCat';
 import AudioLecturesCat from './Components/AudioLecturesCat';
+import TopBar from './Components/TopBar';
+import SocialMedia from './Components/SocialMedia';
 
 function App() {
   return (
@@ -48,6 +50,7 @@ function App() {
         <Router>
           <MyProvider>
             <Scroll />
+            <TopBar />
             <Navbar />
             <Routes>
               <Route path='/' element={<Home />} />
@@ -57,6 +60,7 @@ function App() {
               <Route path='/pdf-books' element={<Books />} />
               <Route path='/courses' element={<Courses />} />
               <Route path='/contact' element={<Contact />} />
+              <Route path='/social-media' element={<SocialMedia />} />
               <Route path='/video-lecture/:title' element={<VideoLecturesDetail />} />
               <Route path='/video-lectures/:category' element={<VideoLecturesCat />} />
               <Route path='/audio-lecture/:title' element={<AudioLectureDetail />} />

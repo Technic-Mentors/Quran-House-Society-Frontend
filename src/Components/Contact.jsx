@@ -35,30 +35,39 @@ export default function Contact() {
             {/* contact page data */}
             <div className="container contactInfo py-4">
                 <div className="row">
-                    <div className="col-md-4">
+                    <div className="col-md-3">
                         <div className="card" style={{ textAlign: "center" }}>
                             <div className="card-body">
-                                <i className="fas fa-phone"></i>
+                                <i className="fas fa-map-marker-alt"></i>
                                 <h1 className={urduFont}>{t("conAddHead")}</h1>
-                                <p>Jinnah Chowk, Sialkot Road Gujranwala Near Jinnah Park</p>
+                                <p>Wassalam 54 L,Valencia Town, Lahore</p>
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-3">
                         <div className="card" style={{ textAlign: "center" }}>
                             <div className="card-body">
                                 <i className="fas fa-envelope"></i>
                                 <h1 className={urduFont}>{t("conPhoHead")}</h1>
-                                <p>00001111010</p>
+                                <p> usman@mk.com.pk</p>
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-3">
                         <div className="card" style={{ textAlign: "center" }}>
                             <div className="card-body">
-                                <i className="fas fa-map-marker-alt"></i>
+                                <i className="fas fa-envelope"></i>
+                                <h1 className={urduFont}>{t("conPhoHead")}</h1>
+                                <p>dtmusman15@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-3">
+                        <div className="card" style={{ textAlign: "center" }}>
+                            <div className="card-body">
+                                <i className="fas fa-phone"></i>
                                 <h1 className={urduFont}>{t("conEmaHead")}</h1>
-                                <p>youremail@gmail.com</p>
+                                <p>+92 300 8454065</p>
                             </div>
                         </div>
                     </div>

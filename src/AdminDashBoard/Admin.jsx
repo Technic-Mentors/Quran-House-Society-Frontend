@@ -4,7 +4,7 @@ import AdminBar from "./AdminBar";
 export default function Admin() {
     return (
         <div>
-            <AdminBar/>
+            <AdminBar />
             {/* header start */}
             <div className="allPageHeaderBg">
                 <div className="allPageHeaderOverlay">

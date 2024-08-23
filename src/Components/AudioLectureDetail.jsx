@@ -47,10 +47,10 @@ export default function AudioLectureDetail() {
                 </div>
                 <div className="row justify-content-between mt-4">
                     <div className="col-md-3 col-7">
-                        <a href={lectureDetail.powerPointLink!=="" && lectureDetail.powerPointLink} target="blank"> <button className="btn btn-outline-success"><i className="fas fa-arrow-right me-2"></i> Power Point Link</button></a>
+                        <a href={lectureDetail.powerPointLink !== "" && lectureDetail.powerPointLink} target="blank"> <button className="btn btn-outline-success"><i className="fas fa-arrow-right me-2"></i> Power Point Link</button></a>
                     </div>
                     <div className="col-md-2 col-5 d-flex justify-content-end">
-                        <a href={lectureDetail.pdfLink!=="" && lectureDetail.pdfLink} target="blank"> <button className="btn btn-outline-success"><i className="fas fa-arrow-right me-2"></i> PDF Link</button></a>
+                        <a href={lectureDetail.pdfLink !== "" && lectureDetail.pdfLink} target="blank"> <button className="btn btn-outline-success"><i className="fas fa-arrow-right me-2"></i> PDF Link</button></a>
                     </div>
                 </div>
             </div>
